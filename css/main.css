@@ -1,0 +1,261 @@
+body {
+  background-color: #FFFFFF;
+  font-family: 'Ubuntu', sans-serif;
+  position: relative;
+  top: 50px;
+}
+.btn-general {
+  background-color: #e8c8e7;
+}
+
+/*-------Home Screen--------*/
+
+@media only screen and (min-width: 800px) {
+  .split-screen {
+      display: flex;
+  }
+
+  .left_side {
+      flex: 1;
+      margin: auto;
+      background-color: black;
+      padding: 10px;
+      width: 50%;
+      color: white;
+      height: 562px;
+      display: flex;
+      align-items: center;
+  }
+
+  .right_side {
+      flex: 1;
+  }
+
+  #home_links{
+    width: 150px;
+  }
+  
+}
+@media only screen and (max-width: 800px) {
+  .split-screen {
+      display: grid;
+  }
+  .menu-image{
+    height: 400px;
+  }
+
+  .left_side {
+      margin-top: 5px;
+      background-color: black;
+      padding: 4  0px;
+      width: 100%;
+      color: white;
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .right_side {
+      flex: 1;
+  }
+
+  #home_links{
+    width: 150px;
+  }
+}
+/*-------END--------*/
+/*-------Messages Screen--------*/
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.container {
+  border-radius: 5px;
+  padding: 20px 0;
+}
+
+form label {
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+
+#messageInput {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+#messageSubmit {
+  background-color: #413b3b;
+  color: #fff;
+  padding: 15px 50px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/*--------------Divider-------------*/
+.vertical {
+      border-left: 6px solid blue;
+      height: 200px;
+      position:absolute;
+      left: 50%;
+}
+/*----------------------------------*/
+
+/*-----------------IT Confirmation message------------------*/
+
+@media screen and (max-height: 450px) {
+  .overlay-userDetails {overflow-y: auto;}
+  .overlay-userDetails a {font-size: 20px}
+  .overlay-userDetails .closebtn {  
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .wrapper {
+    margin: 70px auto;
+    padding: 20px;
+    background: #e7e7e7;
+    border-radius: 5px;
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
+
+  .wrapper h2 {
+    margin-top: 0;
+    color: #333;
+  }
+
+  .wrapper .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .wrapper .close:hover {
+    color: #06D85F;
+  }
+
+  .wrapper .content {
+    max-height: 30%;
+    overflow: auto;
+  }
+
+}
+
+@media only screen and (max-width: 951px) {
+
+  .wrapper {
+    margin: 70px auto;
+    padding: 20px;
+    background: #e7e7e7;
+    border-radius: 5px;
+    width: 60%;
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
+
+  .wrapper h2 {
+    margin-top: 0;
+    color: #333;
+  }
+
+  .wrapper .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .wrapper .close:hover {
+    color: #06D85F;
+  }
+
+  .wrapper .content {
+    max-height: 30%;
+    overflow: auto;
+  }
+  .wrapper-confirmation{
+    font-size: clamp(0.9375rem, 0.6731rem + 1.1282vw, 1.625rem);
+  }
+
+
+}
+
+
+@media only screen and (min-width: 951px) {
+
+  .wrapper {
+    margin: 70px auto;
+    padding: 20px;
+    background: #e7e7e7;
+    border-radius: 5px;
+    width: 40%;
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
+
+  .wrapper h2 {
+    margin-top: 0;
+    color: #333;
+  }
+
+  .wrapper .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .wrapper .close:hover {
+    color: #06D85F;
+  }
+
+  .wrapper .content {
+    max-height: 30%;
+    overflow: auto;
+  }
+  .wrapper-confirmation{
+    font-size: clamp(0.9375rem, 0.6731rem + 1.1282vw, 1.625rem);
+  }
+  .wrapper-message {
+    font-size: clamp(0.75rem, 0.6538rem + 0.4103vw, 1rem); 
+  }
+}

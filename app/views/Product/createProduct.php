@@ -1,0 +1,41 @@
+<?php $this->view('shared/header', _('Add Product')); ?>
+<?php $this->view('shared/navigation/nav'); ?>
+
+<div class='common-container' 
+align='center'>
+	<p class="sign" align="center"><?=_('Add a New Product')?></p>
+	<form action='' method='post' enctype="multipart/form-data">
+
+		<input class="input-inv" type="text" align="center" placeholder="<?= _('Name') ?>" name="name" required>
+
+		<div align="center">
+			<select class="dropdown-inv" 
+			name="category" id="status" >
+				<option selected disabled><?= _('--Select a Category--') ?></option>
+				<?php
+				foreach ($data as $category) { ?>
+				 	<option value="<?=$category->category_id ?>">
+				 		<?= $category->category_name ?>
+				 	</option>
+				<?php  } ?>
+			</select>
+		</div>
+		<textarea class="input-inv" name="description" placeholder="<?= _('Description...') ?>" ></textarea>
+
+		<div class="grid-50" style="margin-right: 0px;" align="center">
+
+			<label><?=_('Picture')?></label>
+			<!-- Place holder for input type file might be useless -->
+			<label class="file-label" >
+				<input class="file-input" type="file" placeholder="<?=_('Picture')?>" name="productPicture">
+			</label>
+			<input class="submit-inv" type="submit" value="<?=_('Add Product')?>" name="action"> 
+
+			<a class="btn-general" href="/Product/index" role="button" ><?= _('Back') ?></a>
+		</div>
+	 
+	</form>
+
+</div>
+
+<?php $this->view('shared/footer'); ?>
