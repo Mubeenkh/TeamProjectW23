@@ -1,3 +1,6 @@
+**This is a copy of the actual project**
+Original link: https://github.com/Deven8378/TeamProjectW23.git
+
 # TeamProjectW23
 Semester 4: System Development and eCommerce Final project -sdsds
 
